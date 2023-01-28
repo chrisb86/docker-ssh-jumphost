@@ -20,7 +20,4 @@ chown -R ${USER}:${USER} /config
 
 set -xv
 
-/usr/sbin/sshd -D -e -4 \
-    -o "HostKey=${CONFIG_DIR}/ssh_host_rsa_key" \
-    -o "HostKey=${CONFIG_DIR}/ssh_host_ed25519_key" \
-    -o "Port=${PORT}" \
+/usr/sbin/sshd -D -e -4

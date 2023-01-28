@@ -1,7 +1,17 @@
+PermitRootLogin no
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+AuthenticationMethods publickey
+PubkeyAuthentication yes
+AllowUsers bastion
+UsePAM no
 PermitTTY no
 X11Forwarding no
 PermitTunnel no
 GatewayPorts no
+HostKey /config/ssh_host_ed25519_key
+HostKey /config/ssh_host_rsa_key
+Port 2222
 ForceCommand /sbin/nologin
 Match User bastion
     AllowTcpForwarding yes
