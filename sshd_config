@@ -1,0 +1,8 @@
+PermitTTY no
+X11Forwarding no
+PermitTunnel no
+GatewayPorts no
+ForceCommand /sbin/nologin
+Match User bastion
+    AllowTcpForwarding yes
+    AuthorizedKeysFile  /config/authorized_keys

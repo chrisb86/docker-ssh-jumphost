@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  ssh-jumphost:
+    container_name: ssh-jumphost
+    build:
+      context: https://github.com/chrisb86/docker-ssh-jumphost.git
+    volumes:
+      - ./config:/config
+    ports:
+      - 2222:2222
+    tmpfs:
+      - /tmp
+      - /run
+      - /var/tmp
+    read_only: true
