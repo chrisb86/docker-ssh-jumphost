@@ -1,6 +1,6 @@
 # docker-ssh-jumphost
 
-Dockerfile for building an image that runs an OpenSSH server that's configured to act as a ProxJump host only.
+Dockerfile for building an image that runs an OpenSSH server that's configured to act as a ProxyJump host only.
 
 The server listens on port 2222. The only user that is able ta connect is _bastion_. It is not possible to get a terminal on the host. It is only suitable to ProxyJump to other hosts.
 
@@ -33,4 +33,4 @@ services:
 
 In this example the whole container is readonly and directories that have to be writable are mounted with tmpfs.
 
-Just create the _docker-compose.yml_ run `docker-compose up -d --build`and you're done.
+Just create the _docker-compose.yml_ run `docker compose up -d`and you're done.

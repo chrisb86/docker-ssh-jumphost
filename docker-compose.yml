@@ -1,10 +1,8 @@
-version: "3"
-
 services:
   ssh-jumphost:
+    image: git.debilux.org/chris/nsupdate
     container_name: ssh-jumphost
-    build:
-      context: https://github.com/chrisb86/docker-ssh-jumphost.git
+    restart: unless-stopped
     volumes:
       - ./config:/config
     ports:
